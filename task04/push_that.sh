@@ -1,15 +1,11 @@
 #!/bin/bash
-
-
-git add .
-
-while [ $# != 1 ]
-do 
-   echo "Entrez un message"
-done
-
-git add .
+if [ $# = 1 ]
+then   
+git add -u 
 git commit -m "$1"
 git push -u origin main
 
+else 
+echo "Envoyez votre message en argument"
 
+fi
